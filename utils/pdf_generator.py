@@ -1,0 +1,158 @@
+
+from fpdf import FPDF
+
+dados = [{'id': 1, 'janela_id': 'janela_1', 'nome_loja': 'Loja 1', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'}, 
+         {'id': 2, 'janela_id': 'janela_2', 'nome_loja': 'Loja 2', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 3, 'janela_id': 'janela_3', 'nome_loja': 'Loja 3', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 4, 'janela_id': 'janela_4', 'nome_loja': 'Loja 4', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 5, 'janela_id': 'janela_5', 'nome_loja': 'Loja 5', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 6, 'janela_id': 'janela_6', 'nome_loja': 'Loja 6', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 7, 'janela_id': 'janela_7', 'nome_loja': 'Loja 7', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 8, 'janela_id': 'janela_8', 'nome_loja': 'Loja 8', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 9, 'janela_id': 'janela_9', 'nome_loja': 'Loja 9', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 10, 'janela_id': 'janela_10', 'nome_loja': 'Loja 10', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 11, 'janela_id': 'janela_11', 'nome_loja': 'Loja 11', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 12, 'janela_id': 'janela_12', 'nome_loja': 'Loja 12', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 13, 'janela_id': 'janela_13', 'nome_loja': 'Loja 13', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 14, 'janela_id': 'janela_14', 'nome_loja': 'Loja 14', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 15, 'janela_id': 'janela_15', 'nome_loja': 'Loja 15', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+         {'id': 16, 'janela_id': 'janela_16', 'nome_loja': 'Loja 16', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'}]
+
+# Calculate perfect equal margins
+PAGE_WIDTH = 297  # A4 landscape width in mm
+WINDOW_WIDTH = 65  # Individual window width
+COLUMNS = 4
+GUTTER = 10  # Space between columns
+
+# Calculate total content width and equal margins
+total_content_width = (WINDOW_WIDTH * COLUMNS) + (GUTTER * (COLUMNS - 1))
+equal_margin = (PAGE_WIDTH - total_content_width) / 2
+
+# Template for 4x4 grid in landscape A4 with perfectly equal margins
+template = {
+    # Row 1
+    'janela_1': {'x': equal_margin, 'y': 10, 'w': WINDOW_WIDTH, 'h': 45},
+    'janela_2': {'x': equal_margin + WINDOW_WIDTH + GUTTER, 'y': 10, 'w': WINDOW_WIDTH, 'h': 45},
+    'janela_3': {'x': equal_margin + (WINDOW_WIDTH + GUTTER) * 2, 'y': 10, 'w': WINDOW_WIDTH, 'h': 45},
+    'janela_4': {'x': equal_margin + (WINDOW_WIDTH + GUTTER) * 3, 'y': 10, 'w': WINDOW_WIDTH, 'h': 45},
+    
+    # Row 2
+    'janela_5': {'x': equal_margin, 'y': 60, 'w': WINDOW_WIDTH, 'h': 45},
+    'janela_6': {'x': equal_margin + WINDOW_WIDTH + GUTTER, 'y': 60, 'w': WINDOW_WIDTH, 'h': 45},
+    'janela_7': {'x': equal_margin + (WINDOW_WIDTH + GUTTER) * 2, 'y': 60, 'w': WINDOW_WIDTH, 'h': 45},
+    'janela_8': {'x': equal_margin + (WINDOW_WIDTH + GUTTER) * 3, 'y': 60, 'w': WINDOW_WIDTH, 'h': 45},
+    
+    # Row 3
+    'janela_9': {'x': equal_margin, 'y': 110, 'w': WINDOW_WIDTH, 'h': 45},
+    'janela_10': {'x': equal_margin + WINDOW_WIDTH + GUTTER, 'y': 110, 'w': WINDOW_WIDTH, 'h': 45},
+    'janela_11': {'x': equal_margin + (WINDOW_WIDTH + GUTTER) * 2, 'y': 110, 'w': WINDOW_WIDTH, 'h': 45},
+    'janela_12': {'x': equal_margin + (WINDOW_WIDTH + GUTTER) * 3, 'y': 110, 'w': WINDOW_WIDTH, 'h': 45},
+    
+    # Row 4
+    'janela_13': {'x': equal_margin, 'y': 160, 'w': WINDOW_WIDTH, 'h': 45},
+    'janela_14': {'x': equal_margin + WINDOW_WIDTH + GUTTER, 'y': 160, 'w': WINDOW_WIDTH, 'h': 45},
+    'janela_15': {'x': equal_margin + (WINDOW_WIDTH + GUTTER) * 2, 'y': 160, 'w': WINDOW_WIDTH, 'h': 45},
+    'janela_16': {'x': equal_margin + (WINDOW_WIDTH + GUTTER) * 3, 'y': 160, 'w': WINDOW_WIDTH, 'h': 45}
+}
+
+output_path = "folheto_final.pdf"
+
+pdf = FPDF(orientation='L', format='A4')  # Landscape orientation
+pdf.add_page()
+
+
+
+# Add background pattern
+pattern_path = "assets/patterns/pattern_tile.png"  # Replace with your chosen pattern
+pattern_width = 20  # Width of each tile in mm
+pattern_height = 20  # Height of each tile in mm
+
+# Calculate number of tiles needed to cover the page
+page_height = 210  # A4 landscape height in mm
+tiles_x = int(PAGE_WIDTH // pattern_width) + 1
+tiles_y = int(page_height // pattern_height) + 1
+
+for i in range(tiles_x):
+    for j in range(tiles_y):
+        x = i * pattern_width
+        y = j * pattern_height
+        pdf.image(pattern_path, x=x, y=y, w=pattern_width, h=pattern_height)
+
+
+
+
+pdf.set_auto_page_break(False)  # Prevent automatic page breaks
+
+# Set equal margins
+pdf.set_left_margin(equal_margin)
+pdf.set_right_margin(equal_margin)
+pdf.set_top_margin(10)
+
+print(f"Left/Right margin: {equal_margin:.1f}mm")
+print(f"Total content width: {total_content_width}mm")
+print(f"Page width: {PAGE_WIDTH}mm")
+
+for item in dados:
+    janela_id = item["janela_id"]
+    if janela_id not in template:
+        continue
+
+    props = template[janela_id]
+    x, y, w, h = props["x"], props["y"], props["w"], props["h"]
+
+    # Calculate areas for image section (left 40%) and text section (right 60%)
+    image_section_width = w * 0.4
+    text_section_width = w * 0.6
+    text_section_x = x + image_section_width
+
+    # Square main image (left section - top part)
+    if "imagem_path" in item:
+        square_size = image_section_width - 4  # Small margin, square size
+        img_x = x + 2
+        img_y = y + 2
+        pdf.image(item["imagem_path"], x=img_x, y=img_y, w=square_size, h=square_size)
+
+    # Logo area (left section - bottom part, next to last text)
+    logo_area_y = y + square_size + 4  # Below the square image
+    logo_size = square_size * 0.75  # 75% of square image width for logo
+    
+    if "logo_path" in item:
+        logo_x = x + 2
+        logo_y = logo_area_y
+        pdf.image(item["logo_path"], x=logo_x, y=logo_y, w=logo_size, h=logo_size)
+
+    # Store name (right section - top)
+    pdf.set_font("Arial", "B", 10)
+    nome_y = y + 2
+    pdf.set_xy(text_section_x, nome_y)
+    pdf.cell(text_section_width, 5, item["nome_loja"], ln=0)
+
+    # First three text fields (right section - below store name)
+    pdf.set_font("Arial", "", 8)
+    text_start_y = nome_y + 7
+    
+    # First three texts (texto_1, texto_2, texto_3)
+    for i in range(1, 4):
+        texto = item.get(f"texto_{i}", "")
+        if texto:
+            pdf.set_xy(text_section_x, text_start_y + (i-1)*6)
+            pdf.cell(text_section_width, 4, texto, ln=0)
+
+    # Last text field (texto_4) - occupies remaining space next to logo
+    texto_4 = item.get("texto_4", "")
+    if texto_4:
+        # Calculate available space for last text
+        last_text_x = x + 2 + logo_size + 2  # Start after logo with small margin
+        last_text_width = w - (last_text_x - x) - 2  # Remaining width in left section
+        last_text_y = logo_area_y + (logo_size / 2) - 2  # Vertically center with logo
+        
+        pdf.set_xy(last_text_x, last_text_y)
+        pdf.set_font("Arial", "", 7)  # Slightly smaller font for last text
+        # Use multi_cell to wrap text within the available space
+        pdf.multi_cell(last_text_width, 3, texto_4)
+
+    # Optional: Draw border around each window for visual reference
+    pdf.rect(x, y, w, h)
+
+pdf.output(output_path)
+print(f"PDF generated successfully: {output_path}")
