@@ -6,17 +6,17 @@ def getTemplate_mm_A4LANDSCAPE():
     #Calculate perfect equal margins
     PAGE_WIDTH = 297  # A4 landscape width in mm
     COLUMNS = 4
-    # 13.5-60-10-60-10-60-10-60-13.5 = 297
-    MARGIN_W = 13.5 
-    GUTTER_W=10
-    WINDOW_WIDTH=60
+    # 2.5-70-4-70-4-70-4-70-2.5 = 297
+    MARGIN_W = 2.5
+    GUTTER_W=4
+    WINDOW_WIDTH=70
 
     PAGE_HEIGHT = 210 # A4 landscape height in mm
     LINES = 4
-    # 10-40-10-40-10-40-10-40-10 = 210
-    MARGIN_H = 10 
-    GUTTER_H=10
-    WINDOW_HEIGHT=40
+    # 5.5-46-5-46-5-46-5-46-5.5 = 210
+    MARGIN_H = 5
+    GUTTER_H=4
+    WINDOW_HEIGHT=47
     row1_y= MARGIN_H
     row2_y= MARGIN_H + WINDOW_HEIGHT + GUTTER_H
     row3_y= MARGIN_H + WINDOW_HEIGHT + GUTTER_H + WINDOW_HEIGHT + GUTTER_H
@@ -61,22 +61,27 @@ def getTemplate_mm_A4LANDSCAPE():
 
 def getData():
     #DATA
-    dados = [{'id': 1, 'janela_id': 'janela_1', 'nome_loja': 'Loja 1', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'}, 
-            {'id': 2, 'janela_id': 'janela_2', 'nome_loja': 'Loja 2', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 3, 'janela_id': 'janela_3', 'nome_loja': 'Loja 3', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 4, 'janela_id': 'janela_4', 'nome_loja': 'Loja 4', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 5, 'janela_id': 'janela_5', 'nome_loja': 'Loja 5', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 6, 'janela_id': 'janela_6', 'nome_loja': 'Loja 6', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 7, 'janela_id': 'janela_7', 'nome_loja': 'Loja 7', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 8, 'janela_id': 'janela_8', 'nome_loja': 'Loja 8', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 9, 'janela_id': 'janela_9', 'nome_loja': 'Loja 9', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 10, 'janela_id': 'janela_10', 'nome_loja': 'Loja 10', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 11, 'janela_id': 'janela_11', 'nome_loja': 'Loja 11', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 12, 'janela_id': 'janela_12', 'nome_loja': 'Loja 12', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 13, 'janela_id': 'janela_13', 'nome_loja': 'Loja 13', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 14, 'janela_id': 'janela_14', 'nome_loja': 'Loja 14', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 15, 'janela_id': 'janela_15', 'nome_loja': 'Loja 15', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'},
-            {'id': 16, 'janela_id': 'janela_16', 'nome_loja': 'Loja 16', 'texto_1': 'Oferta especial', 'texto_2': 'Desconto de até 30%', 'texto_3': 'Válido até 31/10', 'texto_4': 'Consulte condições', 'imagem_path': 'assets/imagens/imagem_padrao.png', 'logo_path': 'assets/logos/logo_padrao.png'}]
+    dados = [
+            {'id': 1, 'janela_id': 'janela_1', 'titulo': 'Vestido em Seda Pura', 'subtitulo': 'Oportunidade', 'descricao': 'Vestido vinho de festa, em seda pura importada de finíssima qualidade', 'valor': 'De R$989,00 por R$788,00', 'nome_loja': 'Veste Sinhá', 'endereco': 'Al ghyu 334 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img1.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+            {'id': 2, 'janela_id': 'janela_2', 'titulo': 'Conjunto de Blazer e Calça', 'subtitulo': 'Oferta impertível da marca X&X', 'descricao': 'Conjunto esporte para ocasiões especiais com corte moderno para uso casual chic', 'valor': 'De R$1800,00 por R$1290,00', 'nome_loja': 'SXER', 'endereco': 'Al Macucos 135 Sao Paulo SP 456 Bairro dos Pratos', 'imagem_path': 'assets/imagens/img2.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+            {'id': 3, 'janela_id': 'janela_3', 'titulo': 'Terno Esportivo Azul', 'subtitulo': 'Grande Promoção 30% de desconto', 'descricao': 'Terno completo com colete corte inglês em gabardine', 'valor': 'De R$3300,00 por R$2199,00', 'nome_loja': 'Dr. Terno', 'endereco': 'Al Gretyuter 3455 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img3.png', 'logo_path': 'assets/logos/logo1.png'},
+            {'id': 4, 'janela_id': 'janela_4', 'titulo': 'Carteira Pelica', 'subtitulo': 'Oferta especial desconto de 50%', 'descricao': 'Carteira de festa em pelica rosa para seu sucesso criata pelo estilista JJFred. Diponível nas cores rosa, edverde , azul e creme', 'valor': 'De R$2300,00 por R$1199,00', 'nome_loja': 'Sereníssima', 'endereco': 'Al Macucos 135 Sao Paulo SP CEP 04654-000', 'imagem_path': 'assets/imagens/img4.png', 'logo_path': 'assets/logos/logo1.png'}, 
+           
+
+            {'id': 5, 'janela_id': 'janela_5', 'titulo': 'Carteira Pelica', 'subtitulo': 'Oferta especial desconto de 50%', 'descricao': 'Carteira de festa em pelica rosa para seu sucesso criata pelo estilista JJFred. Diponível nas cores rosa, edverde , azul e creme', 'valor': 'De R$2300,00 por R$1199,00', 'nome_loja': 'Sereníssima', 'endereco': 'Al Macucos 135 Sao Paulo SP CEP 04654-000', 'imagem_path': 'assets/imagens/img4.png', 'logo_path': 'assets/logos/logo1.png'}, 
+            {'id': 6, 'janela_id': 'janela_6', 'titulo': 'Conjunto de Blazer e Calça', 'subtitulo': 'Oferta impertível da marca X&X', 'descricao': 'Conjunto esporte para ocasiões especiais com corte moderno para uso casual chic', 'valor': 'De R$1800,00 por R$1290,00', 'nome_loja': 'SXER', 'endereco': 'Al Macucos 135 Sao Paulo SP 456 Bairro dos Pratos', 'imagem_path': 'assets/imagens/img2.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+            {'id': 7, 'janela_id': 'janela_7', 'titulo': 'Terno Esportivo Azul', 'subtitulo': 'Grande Promoção 30% de desconto', 'descricao': 'Terno completo com colete corte inglês em gabardine', 'valor': 'De R$3300,00 por R$2199,00', 'nome_loja': 'Dr. Terno', 'endereco': 'Al Gretyuter 3455 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img3.png', 'logo_path': 'assets/logos/logo1.png'},
+            {'id': 8, 'janela_id': 'janela_8', 'titulo': 'Vestido em Seda Pura', 'subtitulo': 'Oportunidade', 'descricao': 'Vestido vinho de festa, em seda pura importada de finíssima qualidade', 'valor': 'De R$989,00 por R$788,00', 'nome_loja': 'Veste Sinhá', 'endereco': 'Al ghyu 334 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img1.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+
+            {'id': 9, 'janela_id': 'janela_9', 'titulo': 'Carteira Pelica', 'subtitulo': 'Oferta especial desconto de 50%', 'descricao': 'Carteira de festa em pelica rosa para seu sucesso criata pelo estilista JJFred. Diponível nas cores rosa, edverde , azul e creme', 'valor': 'De R$2300,00 por R$1199,00', 'nome_loja': 'Sereníssima', 'endereco': 'Al Macucos 135 Sao Paulo SP CEP 04654-000', 'imagem_path': 'assets/imagens/img4.png', 'logo_path': 'assets/logos/logo1.png'}, 
+            {'id': 10, 'janela_id': 'janela_10', 'titulo': 'Conjunto de Blazer e Calça', 'subtitulo': 'Oferta impertível da marca X&X', 'descricao': 'Conjunto esporte para ocasiões especiais com corte moderno para uso casual chic', 'valor': 'De R$1800,00 por R$1290,00', 'nome_loja': 'SXER', 'endereco': 'Al Macucos 135 Sao Paulo SP 456 Bairro dos Pratos', 'imagem_path': 'assets/imagens/img2.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+            {'id': 11, 'janela_id': 'janela_11', 'titulo': 'Terno Esportivo Azul', 'subtitulo': 'Grande Promoção 30% de desconto', 'descricao': 'Terno completo com colete corte inglês em gabardine', 'valor': 'De R$3300,00 por R$2199,00', 'nome_loja': 'Dr. Terno', 'endereco': 'Al Gretyuter 3455 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img3.png', 'logo_path': 'assets/logos/logo1.png'},
+            {'id': 12, 'janela_id': 'janela_12', 'titulo': 'Vestido em Seda Pura', 'subtitulo': 'Oportunidade', 'descricao': 'Vestido vinho de festa, em seda pura importada de finíssima qualidade', 'valor': 'De R$989,00 por R$788,00', 'nome_loja': 'Veste Sinhá', 'endereco': 'Al ghyu 334 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img1.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+
+            {'id': 13, 'janela_id': 'janela_13', 'titulo': 'Carteira Pelica', 'subtitulo': 'Oferta especial desconto de 50%', 'descricao': 'Carteira de festa em pelica rosa para seu sucesso criata pelo estilista JJFred. Diponível nas cores rosa, edverde , azul e creme', 'valor': 'De R$2300,00 por R$1199,00', 'nome_loja': 'Sereníssima', 'endereco': 'Al Macucos 135 Sao Paulo SP CEP 04654-000', 'imagem_path': 'assets/imagens/img4.png', 'logo_path': 'assets/logos/logo1.png'}, 
+            {'id': 14, 'janela_id': 'janela_14', 'titulo': 'Conjunto de Blazer e Calça', 'subtitulo': 'Oferta impertível da marca X&X', 'descricao': 'Conjunto esporte para ocasiões especiais com corte moderno para uso casual chic', 'valor': 'De R$1800,00 por R$1290,00', 'nome_loja': 'SXER', 'endereco': 'Al Macucos 135 Sao Paulo SP 456 Bairro dos Pratos', 'imagem_path': 'assets/imagens/img2.png', 'logo_path': 'assets/logos/logo_padrao.png'},
+            {'id': 15, 'janela_id': 'janela_15', 'titulo': 'Terno Esportivo Azul', 'subtitulo': 'Grande Promoção 30% de desconto', 'descricao': 'Terno completo com colete corte inglês em gabardine', 'valor': 'De R$3300,00 por R$2199,00', 'nome_loja': 'Dr. Terno', 'endereco': 'Al Gretyuter 3455 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img3.png', 'logo_path': 'assets/logos/logo1.png'},
+            {'id': 16, 'janela_id': 'janela_16', 'titulo': 'Vestido em Seda Pura', 'subtitulo': 'Oportunidade', 'descricao': 'Vestido vinho de festa, em seda pura importada de finíssima qualidade', 'valor': 'De R$989,00 por R$788,00', 'nome_loja': 'Veste Sinhá', 'endereco': 'Al ghyu 334 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img1.png', 'logo_path': 'assets/logos/logo_padrao.png'}]
     return dados
 
 def convert_template_mm_to_px_A4LANDSCAPE300(template_mm):
@@ -113,16 +118,60 @@ def create_background(pattern_path,PAGE_WIDTH,PAGE_HEIGHT):
     return bg
 
 # === DRAW WINDOW ===
-def draw_window(draw, canvas, item, rect, font_regular, font_bold):
+def draw_window(draw, canvas, item, rect ):
+    
+    def wrap_text(text, max_font, max_width, max_height):
+        # wraps text to a number of lines that fit within max_width and max_height
+        def get_lines(text, font, max_width):
+            #wraps text to a number of lines that fit within max_width
+            image = Image.new("RGB", (600, 400), "white")
+            draw = ImageDraw.Draw(image)
+            lines = []
+            words = text.split()
+            line = ""
+            for word in words:
+                test_line = f"{line} {word}".strip()
+                width = draw.textlength(test_line, font=font)
+                if width <= max_width:
+                    line = test_line
+                else:
+                    lines.append(line)
+                    line = word
+            lines.append(line)
+            return lines
+        font = max_font
+        lines= get_lines(text, font, max_width)
+        nlines=len(lines)
+
+        bbox = font.getbbox(lines[0])
+        heightFont = bbox[3] - bbox[1]
+        height= (heightFont + 5)*nlines
+        while height > max_height:
+            font_size=font.size-2
+            if font_size < 24:
+                nlines=nlines-1
+            else:
+                font=ImageFont.truetype("arialbd.ttf", font_size)
+                lines= get_lines(text, font, max_width)
+                nlines=len(lines)
+
+            bbox = font.getbbox(lines[0])
+            heightFont = bbox[3] - bbox[1]
+            height= (heightFont + 5)*nlines   
+            
+        return lines,font
+
+    font_regular = ImageFont.truetype("arialbd.ttf", 36)
+    font_bold = ImageFont.truetype("arialbd.ttf", 48)
     x, y, w, h = rect['x'], rect['y'], rect['w'], rect['h']
     radius = 20
     draw.rounded_rectangle((x, y, x + w, y + h), radius=radius, outline="black", width=2)
 
     # Image section
-    img_w = int(w * 0.4) - 20
-    img_h = int(h * 0.6)
-    logo_h = int(h * 0.3)
-    logo_w = img_w
+    img_w = int(w * 0.50) - 20
+    img_h = img_w
+    logo_h = int(h * 0.24)
+    logo_w = logo_h
 
     img = Image.open(item["imagem_path"]).resize((img_w, img_h))
     logo = Image.open(item["logo_path"]).resize((logo_w, logo_h))
@@ -131,35 +180,69 @@ def draw_window(draw, canvas, item, rect, font_regular, font_bold):
     canvas.paste(logo, (x + 10, y + 20 + img_h))
 
     # Text section
-    tx = x + int(w * 0.4) + 20
+    # titulo
     ty = y + 10
-    draw.text((tx, ty), item["nome_loja"], font=font_bold, fill="black")
-    for i in range(1, 4):
-        draw.text((tx, ty + 30 + (i - 1) * 30), item[f"texto_{i}"], font=font_regular, fill="black")
-
-    draw.text((x + 10 + logo_w + 10, y + 20 + img_h + logo_h // 2), item["texto_4"], font=font_regular, fill="black")
+    tx = x + img_w + 20
+    max_font=font_bold
+    text=item["titulo"]
+    max_width= w - img_w - 10
+    max_height= int((img_h-10)*0.4)
+    lines,font= wrap_text(text, max_font, max_width, max_height)
+    for line in lines:
+        draw.text((tx, ty), line, font=font, fill="black")
+        bbox = font.getbbox(line)
+        heightFont = bbox[3] - bbox[1]
+        ty += heightFont + 5 
+    
+    #subtitulo, descricao,valor
+    ty=ty+10 # y end of title section
+    text_itens=["subtitulo", "descricao", "valor"]
+    max_font=font_regular
+    max_height= int((img_h-10)*0.2)-10
+    for text_item in text_itens:
+        text=item[text_item]  
+        lines,font= wrap_text(text, max_font, max_width, max_height)
+        for line in lines:
+            draw.text((tx, ty), line, font=font, fill="black")
+            bbox = font.getbbox(line)
+            heightFont = bbox[3] - bbox[1]
+            ty += heightFont + 5 
+        ty +=10
+        
+    # nome_loja, endereco
+    ty=y+20+img_h
+    tx=x+logo_w+20
+    text_itens=["nome_loja", "endereco"]
+    max_font=font_regular
+    max_height= int((logo_h-10)/2.0)
+    max_width=w-logo_w-20
+    for text_item in text_itens:
+        text=item[text_item]  
+        lines,font= wrap_text(text, max_font, max_width, max_height)
+        for line in lines:
+            draw.text((tx, ty), line, font=font, fill="black")
+            bbox = font.getbbox(line)
+            heightFont = bbox[3] - bbox[1]
+            ty += heightFont + 5 
+ 
 
 # === MAIN GENERATOR ===
 def generate_flyer(dados, template_px, pattern_path, output_path,DPI,PAGE_WIDTH,PAGE_HEIGHT):
     canvas = create_background(pattern_path,PAGE_WIDTH,PAGE_HEIGHT)
     draw = ImageDraw.Draw(canvas)
-
     # Load fonts (adjust paths if needed)
-    font_regular = ImageFont.truetype("arial.ttf", 24)
-    font_bold = ImageFont.truetype("arialbd.ttf", 28)
-
     for item in dados:
         janela_id = item["janela_id"]
         if janela_id not in template_px:
             continue
-        draw_window(draw, canvas, item, template_px[janela_id], font_regular, font_bold)
-
-    canvas.save("canvas.jpg", "JPEG")
-    print(f"Flyer saved as JPG: {output_path}")
-    canvas.save(output_path, "PDF", resolution=DPI)
-    print(f"Flyer saved as PDF: {output_path}")
+        draw_window(draw, canvas, item, template_px[janela_id])
+    return canvas
 
 template_mm=getTemplate_mm_A4LANDSCAPE()
 dados=getData()
 DPI,PAGE_WIDTH,PAGE_HEIGHT,template_px = convert_template_mm_to_px_A4LANDSCAPE300(template_mm)
-generate_flyer(dados, template_px, "assets/patterns/pattern_tile.png", "folheto_final_alt.pdf",DPI,PAGE_WIDTH,PAGE_HEIGHT)
+canvas=generate_flyer(dados, template_px, "assets/patterns/pattern_tile.png", "folheto_final_alt.pdf",DPI,PAGE_WIDTH,PAGE_HEIGHT)
+canvas.save("folheto.jpg", "JPEG")
+print(f"Flyer saved as JPG: folheto.jpg")
+#canvas.save('folheto.pdf', "PDF", resolution=DPI)
+#print(f"Flyer saved as PDF: folheto.pdf")
