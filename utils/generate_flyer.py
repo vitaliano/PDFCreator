@@ -28,6 +28,7 @@ def getTemplate_mm_A4LANDSCAPEINSIDE():
     col3_x= MARGIN_W + WINDOW_WIDTH + GUTTER_W + WINDOW_WIDTH + GUTTER_W
     col4_x= MARGIN_W + WINDOW_WIDTH + GUTTER_W + WINDOW_WIDTH + GUTTER_W + WINDOW_WIDTH + GUTTER_W
 
+    jan25_height=PAGE_HEIGHT-2*MARGIN_H
 
 
     # Calculate total content width and equal margins
@@ -56,6 +57,24 @@ def getTemplate_mm_A4LANDSCAPEINSIDE():
         'janela_14': {'x': col2_x, 'y': row4_y, 'w': WINDOW_WIDTH, 'h': WINDOW_HEIGHT},
         'janela_15': {'x': col3_x ,'y': row4_y, 'w': WINDOW_WIDTH, 'h': WINDOW_HEIGHT},
         'janela_16': {'x': col4_x, 'y': row4_y, 'w': WINDOW_WIDTH, 'h': WINDOW_HEIGHT},
+        
+        # col 2 external page
+        'janela_17': {'x': col2_x, 'y': row1_y, 'w': WINDOW_WIDTH, 'h': WINDOW_HEIGHT},
+        'janela_18': {'x': col2_x, 'y': row2_y, 'w': WINDOW_WIDTH, 'h': WINDOW_HEIGHT},
+        'janela_19': {'x': col2_x ,'y': row3_y, 'w': WINDOW_WIDTH, 'h': WINDOW_HEIGHT},
+        'janela_20': {'x': col2_x, 'y': row4_y, 'w': WINDOW_WIDTH, 'h': WINDOW_HEIGHT},
+        
+        # col 3 external page
+        'janela_21': {'x': col3_x, 'y': row1_y, 'w': WINDOW_WIDTH, 'h': WINDOW_HEIGHT},
+        'janela_22': {'x': col3_x, 'y': row2_y, 'w': WINDOW_WIDTH, 'h': WINDOW_HEIGHT},
+        'janela_23': {'x': col3_x ,'y': row3_y, 'w': WINDOW_WIDTH, 'h': WINDOW_HEIGHT},
+        'janela_24': {'x': col3_x, 'y': row4_y, 'w': WINDOW_WIDTH, 'h': WINDOW_HEIGHT},
+
+        # col 1 external page  ##### este é o row unico da pagina de fora da esquerda
+        'janela_25': {'x': col1_x, 'y': row1_y, 'w': WINDOW_WIDTH, 'h': jan25_height}, 
+
+        # col 4 external page  ##### este é o row unico da pagina de fora da direita
+        'janela_26': {'x': col4_x, 'y': row1_y, 'w': WINDOW_WIDTH, 'h': jan25_height}
     }
     return template_mm
 
@@ -80,13 +99,24 @@ def getData():
             {'id': 13, 'janela_id': 'janela_13', 'titulo': 'Carteira Pelica', 'subtitulo': 'Oferta especial desconto de 50%', 'descricao': 'Carteira de festa em pelica rosa para seu sucesso criata pelo estilista JJFred. Diponível nas cores rosa, edverde , azul e creme', 'valor': 'De R$2300,00 por R$1199,00', 'nome_loja': 'Sereníssima', 'endereco': 'Al Macucos 135 Sao Paulo SP CEP 04654-000', 'imagem_path': 'assets/imagens/img4.png', 'logo_path': 'assets/logos/logo1.png'}, 
             {'id': 14, 'janela_id': 'janela_14', 'titulo': 'Conjunto de Blazer e Calça', 'subtitulo': 'Oferta impertível da marca X&X', 'descricao': 'Conjunto esporte para ocasiões especiais com corte moderno para uso casual chic', 'valor': 'De R$1800,00 por R$1290,00', 'nome_loja': 'SXER', 'endereco': 'Al Macucos 135 Sao Paulo SP 456 Bairro dos Pratos', 'imagem_path': 'assets/imagens/img2.png', 'logo_path': 'assets/logos/logo03.jpg'},
             {'id': 15, 'janela_id': 'janela_15', 'titulo': 'Terno Esportivo Azul', 'subtitulo': 'Grande Promoção 30% de desconto', 'descricao': 'Terno completo com colete corte inglês em gabardine', 'valor': 'De R$3300,00 por R$2199,00', 'nome_loja': 'Dr. Terno', 'endereco': 'Al Gretyuter 3455 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img3.png', 'logo_path': 'assets/logos/logo05.jpg'},
-            {'id': 16, 'janela_id': 'janela_16', 'titulo': 'Vestido em Seda Pura', 'subtitulo': 'Oportunidade', 'descricao': 'Vestido vinho de festa, em seda pura importada de finíssima qualidade', 'valor': 'De R$989,00 por R$788,00', 'nome_loja': 'Veste Sinhá', 'endereco': 'Al ghyu 334 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img1.png', 'logo_path': 'assets/logos/logo04.jpg'}]
+            {'id': 16, 'janela_id': 'janela_16', 'titulo': 'Vestido em Seda Pura', 'subtitulo': 'Oportunidade', 'descricao': 'Vestido vinho de festa, em seda pura importada de finíssima qualidade', 'valor': 'De R$989,00 por R$788,00', 'nome_loja': 'Veste Sinhá', 'endereco': 'Al ghyu 334 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img1.png', 'logo_path': 'assets/logos/logo04.jpg'},
+    
+            {'id': 17, 'janela_id': 'janela_17', 'titulo': 'Carteira Pelica', 'subtitulo': 'Oferta especial desconto de 50%', 'descricao': 'Carteira de festa em pelica rosa para seu sucesso criata pelo estilista JJFred. Diponível nas cores rosa, edverde , azul e creme', 'valor': 'De R$2300,00 por R$1199,00', 'nome_loja': 'Sereníssima', 'endereco': 'Al Macucos 135 Sao Paulo SP CEP 04654-000', 'imagem_path': 'assets/imagens/img4.png', 'logo_path': 'assets/logos/logo1.png'}, 
+            {'id': 18, 'janela_id': 'janela_18', 'titulo': 'Conjunto de Blazer e Calça', 'subtitulo': 'Oferta impertível da marca X&X', 'descricao': 'Conjunto esporte para ocasiões especiais com corte moderno para uso casual chic', 'valor': 'De R$1800,00 por R$1290,00', 'nome_loja': 'SXER', 'endereco': 'Al Macucos 135 Sao Paulo SP 456 Bairro dos Pratos', 'imagem_path': 'assets/imagens/img2.png', 'logo_path': 'assets/logos/logo03.jpg'},
+            {'id': 19, 'janela_id': 'janela_19', 'titulo': 'Terno Esportivo Azul', 'subtitulo': 'Grande Promoção 30% de desconto', 'descricao': 'Terno completo com colete corte inglês em gabardine', 'valor': 'De R$3300,00 por R$2199,00', 'nome_loja': 'Dr. Terno', 'endereco': 'Al Gretyuter 3455 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img3.png', 'logo_path': 'assets/logos/logo05.jpg'},
+            {'id': 20, 'janela_id': 'janela_20', 'titulo': 'Vestido em Seda Pura', 'subtitulo': 'Oportunidade', 'descricao': 'Vestido vinho de festa, em seda pura importada de finíssima qualidade', 'valor': 'De R$989,00 por R$788,00', 'nome_loja': 'Veste Sinhá', 'endereco': 'Al ghyu 334 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img1.png', 'logo_path': 'assets/logos/logo04.jpg'},
+
+            {'id': 21, 'janela_id': 'janela_21', 'titulo': 'Carteira Pelica', 'subtitulo': 'Oferta especial desconto de 50%', 'descricao': 'Carteira de festa em pelica rosa para seu sucesso criata pelo estilista JJFred. Diponível nas cores rosa, edverde , azul e creme', 'valor': 'De R$2300,00 por R$1199,00', 'nome_loja': 'Sereníssima', 'endereco': 'Al Macucos 135 Sao Paulo SP CEP 04654-000', 'imagem_path': 'assets/imagens/img4.png', 'logo_path': 'assets/logos/logo1.png'}, 
+            {'id': 22, 'janela_id': 'janela_22', 'titulo': 'Conjunto de Blazer e Calça', 'subtitulo': 'Oferta impertível da marca X&X', 'descricao': 'Conjunto esporte para ocasiões especiais com corte moderno para uso casual chic', 'valor': 'De R$1800,00 por R$1290,00', 'nome_loja': 'SXER', 'endereco': 'Al Macucos 135 Sao Paulo SP 456 Bairro dos Pratos', 'imagem_path': 'assets/imagens/img2.png', 'logo_path': 'assets/logos/logo03.jpg'},
+            {'id': 23, 'janela_id': 'janela_23', 'titulo': 'Terno Esportivo Azul', 'subtitulo': 'Grande Promoção 30% de desconto', 'descricao': 'Terno completo com colete corte inglês em gabardine', 'valor': 'De R$3300,00 por R$2199,00', 'nome_loja': 'Dr. Terno', 'endereco': 'Al Gretyuter 3455 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img3.png', 'logo_path': 'assets/logos/logo05.jpg'},
+            {'id': 24, 'janela_id': 'janela_24', 'titulo': 'Vestido em Seda Pura', 'subtitulo': 'Oportunidade', 'descricao': 'Vestido vinho de festa, em seda pura importada de finíssima qualidade', 'valor': 'De R$989,00 por R$788,00', 'nome_loja': 'Veste Sinhá', 'endereco': 'Al ghyu 334 Sao Paulo SP ', 'imagem_path': 'assets/imagens/img1.png', 'logo_path': 'assets/logos/logo04.jpg'}
+            ]
     return dados
 
 def convert_template_mm_to_px_A4LANDSCAPEINSIDE300(template_mm):
     
     # === CONFIG ===
-    DPI = 300
+    DPI = 300  # 3507pxX2480px for A4 at 300 DPI
     MM_TO_PX = DPI / 25.4
     PAGE_WIDTH_MM = 297
     PAGE_HEIGHT_MM = 210
@@ -255,14 +285,21 @@ def generate_flyer(dados, template_px, pattern_path, window_pattern_path,PAGE_WI
         background=draw_window(windowData)
         canvas.paste(background,(x,y))
     return canvas
+
+
+
+# === CRIAR AS PAGINAS DO FOLHETO ===
+
 page_pattern_path= "assets/patterns/pattern_tile2.png"
 window_pattern_path="assets/patterns/pattern_tileb.png"
-insidePagePDFFileName="folhetoInternoPDF.pdf"
-insidePageJpgFileName="folhetoInternoJpg.jpg"
 template_mm=getTemplate_mm_A4LANDSCAPEINSIDE()
 promotions=getData()
-insidePromotions=promotions[0:16]
 DPI,PAGE_WIDTH,PAGE_HEIGHT,template_px = convert_template_mm_to_px_A4LANDSCAPEINSIDE300(template_mm)
+
+# dados exclusivos da pagina de dentro
+insidePagePDFFileName="folhetoInternoPDF.pdf"
+insidePageJpgFileName="folhetoInternoJpg.jpg"
+insidePromotions=promotions[0:16]
 canvas=generate_flyer(insidePromotions, template_px,page_pattern_path,window_pattern_path,PAGE_WIDTH,PAGE_HEIGHT)
 canvas.save(insidePageJpgFileName, "JPEG")
 print(f"Flyer saved as JPG: {insidePageJpgFileName}")
@@ -270,6 +307,27 @@ canvas.save(insidePagePDFFileName, "PDF", resolution=DPI)
 print(f"Flyer saved as PDF:{insidePagePDFFileName}")
 
 
+# dados exclusivos da pagina de fora
+imageShopping_path="assets/imagens/shoppingFolder.png"
+insidePagePDFFileName="folhetoExternoPDF.pdf"
+insidePageJpgFileName="folhetoExternoJpg.jpg"
+imageShopping = Image.open(imageShopping_path)
+imageShopping=imageShopping.resize((template_px['janela_25']['w'],template_px['janela_25']['h']))
 
-##################################
-# Criar a pagina de fora
+outsidePromotions=promotions[16:24]
+canvas=generate_flyer(outsidePromotions, template_px,page_pattern_path,window_pattern_path,PAGE_WIDTH,PAGE_HEIGHT)
+template=template_px['janela_25'] # janela 25 é a da esquera, onde será colocado o anuncio do go2get 
+x=template['x']
+y=template['y']
+canvas.paste(imageShopping,(x,y))
+
+template=template_px['janela_26'] # janela 26 é a da direita, onde será colocado o anuncio do go2get 
+x=template['x']
+y=template['y']
+canvas.paste(imageShopping,(x,y))
+
+
+canvas.save(insidePageJpgFileName, "JPEG")
+print(f"Flyer saved as JPG: {insidePageJpgFileName}")
+canvas.save(insidePagePDFFileName, "PDF", resolution=DPI)
+print(f"Flyer saved as PDF:{insidePagePDFFileName}")
