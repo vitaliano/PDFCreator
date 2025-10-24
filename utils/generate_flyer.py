@@ -6,10 +6,10 @@ def getTemplate_mm_A4LANDSCAPEINSIDE():
     #Calculate perfect equal margins
     PAGE_WIDTH = 297  # A4 landscape width in mm
     COLUMNS = 4
-    # 2.5-70-4-70-4-70-4-70-2.5 = 297
-    MARGIN_W = 2.5
-    GUTTER_W=4
-    WINDOW_WIDTH=70
+    # 13.5-60-10-60-10-60-10-60-13.5 = 297
+    MARGIN_W = 13.5 
+    GUTTER_W=10
+    WINDOW_WIDTH=60
 
     PAGE_HEIGHT = 210 # A4 landscape height in mm
     LINES = 4
